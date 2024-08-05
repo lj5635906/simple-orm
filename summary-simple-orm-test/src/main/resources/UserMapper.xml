@@ -1,0 +1,22 @@
+<mapper namespace="com.summary.mapper.UserMapper">
+
+    <select id="selectList" resultType="com.summary.pojo.User" parameterType="com.summary.pojo.User">
+        select id,username from users
+    </select>
+
+    <select id="selectOne" resultType="com.summary.pojo.User" parameterType="com.summary.pojo.User">
+        select id,username from users where id = #{id} and username = #{username}
+    </select>
+
+    <insert id="saveUser" parameterType="com.summary.pojo.User">
+        insert into users values(#{id},#{username})
+    </insert>
+
+    <update id="updateUser" parameterType="com.summary.pojo.User">
+        update users set username = #{username} where id = #{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from users where id = #{id}
+    </delete>
+</mapper>

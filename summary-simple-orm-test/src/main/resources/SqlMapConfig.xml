@@ -1,0 +1,14 @@
+<configuration>
+
+    <datasource>
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://192.168.31.100:13306/demo"></property>
+        <property name="user" value="root"></property>
+        <property name="password" value="123456"></property>
+    </datasource>
+
+    <mappers>
+        <mapper resource="UserMapper.xml"></mapper>
+    </mappers>
+
+</configuration>
